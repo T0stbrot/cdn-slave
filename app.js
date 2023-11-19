@@ -79,7 +79,7 @@ function setCookies(req, res, message) {
         res.cookie('results', {
           cdn: message.attachments.first()?.url,
           proxy: message.attachments.first()?.proxyURL,
-          uploaded: moment.tz('America/Los_Angeles').format("[File uploaded on ] LL [PST]"),
+          uploaded: moment.tz(Global.timezone).format("[File uploaded on ] LL"),
           mime: req.files.file.mimetype
         });
         resolve();
