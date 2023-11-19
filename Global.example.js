@@ -1,10 +1,10 @@
 exports.config = {
-  port: 443,
-  host: 'localhost',
+  port: 88,
+  host: 'localhost', //set to 0.0.0.0 if you want the website to be public
   token: 'BOT TOKEN',
   fileChannel: 'ID OF CHANNEL TO SEND FILES',
   maxFileSize: {
-    human: "100mb",
-    byte: 104857600
+    human: "25mb", //this is the default discord limit
+    byte: 26214400 //if you have a nitro boosted server multiply these by 4
   }
 }
